@@ -132,6 +132,13 @@ return [
             'meta_title' => 'text',
             'meta_description' => 'text'
         ],
+        'post-category' => [
+            'canal' => [
+                'type' => 'object',
+                'model' => 'PostCanal\\Model\\PostCanal',
+                'format' => 'post-canal'
+            ]
+        ],
         'post' => [
             'canal' => [
                 'type' => 'object',
