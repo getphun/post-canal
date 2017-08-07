@@ -43,7 +43,7 @@ class Canal
         
         // my rss feed?
         if(module_exists('robot'))
-            $index->_metas['feed'] = $dis->router->to('sitePostCanalFeedXML');
+            $index->_metas['feed'] = $dis->router->to('sitePostCanalFeed');
         
         // Schema
         $schema = [
@@ -103,7 +103,7 @@ class Canal
         
         // my rss feed?
         if(module_exists('robot'))
-            $single->_metas['feed'] = $dis->router->to('sitePostCanalSingleFeedXML', ['slug'=>$canal->slug]);
+            $single->_metas['feed'] = $dis->router->to('sitePostCanalSingleFeed', ['slug'=>$canal->slug]);
         
         // schemas 
         $schema = [

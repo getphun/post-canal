@@ -76,27 +76,21 @@ return [
     ],
     '_routes' => [
         'site' => [
-            'sitePostCanalFeedXML' => [
+            'sitePostCanalFeed' => [
                 'rule' => '/post/canal/feed.xml',
-                'handler' => 'PostCanal\\Controller\\Robot::feedXml'
-            ],
-            'sitePostCanalFeedJSON' => [
-                'rule' => '/post/canal/feed.json',
-                'handler' => 'PostCanal\\Controller\\Robot::feedJson'
+                'handler' => 'PostCanal\\Controller\\Robot::feed'
             ],
             'sitePostCanal' => [
                 'rule' => '/post/canal',
                 'handler' => 'PostCanal\\Controller\\Canal::index'
             ],
-            'sitePostCanalSingleFeedXML' => [
+            
+            'sitePostCanalSingleFeed' => [
                 'rule' => '/post/canal/:slug/feed.xml',
-                'handler' => 'PostCanal\\Controller\\Robot::feedSingleXml'
-            ],
-            'sitePostCanalSingleFeedJSON' => [
-                'rule' => '/post/canal/:slug/feed.json',
-                'handler' => 'PostCanal\\Controller\\Robot::feedSingleJson'
+                'handler' => 'PostCanal\\Controller\\Robot::feedSingle'
             ],
             'sitePostCanalSingle' => [
+                'priority' => 0,
                 'rule' => '/post/canal/:slug',
                 'handler' => 'PostCanal\\Controller\\Canal::single'
             ]
