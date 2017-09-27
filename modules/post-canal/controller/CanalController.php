@@ -51,8 +51,11 @@ class CanalController extends \SiteController
         $slug = $this->param->slug;
         
         $canal = PCanal::get(['slug'=>$slug], false);
-        if(!$canal)
+        if(!$canal){
+            if(module_exists('slug-history'))
+                $this->slug->goto('post-canal', $slug, 'sitePostCanalSingle');
             return $this->show404();
+        }
             
         $page = $this->req->getQuery('page', 1);
         $rpp = 12;

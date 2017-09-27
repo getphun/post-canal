@@ -60,7 +60,8 @@ return [
         'site',
         'site-meta',
         '/db-mysql',
-        '/robot'
+        '/robot',
+        '/slug-history'
     ],
     '_services' => [],
     '_autoload' => [
