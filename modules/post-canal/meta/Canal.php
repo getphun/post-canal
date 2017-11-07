@@ -51,12 +51,7 @@ class Canal
             '@type'         => 'CollectionPage',
             'name'          => $meta_title,
             'description'   => $meta_desc,
-            'publisher'     => [
-                '@type'         => 'Organization',
-                'name'          => $dis->config->name,
-                'url'           => $base_url,
-                'logo'          => $meta_image
-            ],
+            'publisher'     => $dis->meta->schemaOrganization(),
             'url'           => $meta_url,
             'image'         => $meta_image
         ];
@@ -111,12 +106,7 @@ class Canal
             '@type'         => 'CollectionPage',
             'name'          => $canal->name,
             'description'   => $meta_desc,
-            'publisher'     => [
-                '@type'         => 'Organization',
-                'name'          => $dis->config->name,
-                'url'           => $base_url,
-                'logo'          => $meta_image
-            ],
+            'publisher'     => $dis->meta->schemaOrganization(),
             'url'           => $meta_url,
             'image'         => $meta_image
         ];
